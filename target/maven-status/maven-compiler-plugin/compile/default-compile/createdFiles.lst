@@ -1,0 +1,10 @@
+com\homevalue\service\AuthService.class
+com\homevalue\repository\EnhancementRepository.class
+com\homevalue\controller\EnhancementController.class
+com\homevalue\service\EnhancementService.class
+com\homevalue\model\Enhancement.class
+com\homevalue\config\CorsConfig.class
+com\homevalue\repository\UserRepository.class
+com\homevalue\controller\AuthController.class
+com\homevalue\HomevalueApplication.class
+com\homevalue\model\User.class

@@ -1,0 +1,10 @@
+C:\homevalue-backend\src\main\java\com\homevalue\config\CorsConfig.java
+C:\homevalue-backend\src\main\java\com\homevalue\service\AuthService.java
+C:\homevalue-backend\src\main\java\com\homevalue\service\EnhancementService.java
+C:\homevalue-backend\src\main\java\com\homevalue\controller\AuthController.java
+C:\homevalue-backend\src\main\java\com\homevalue\model\Enhancement.java
+C:\homevalue-backend\src\main\java\com\homevalue\repository\EnhancementRepository.java
+C:\homevalue-backend\src\main\java\com\homevalue\controller\EnhancementController.java
+C:\homevalue-backend\src\main\java\com\homevalue\HomevalueApplication.java
+C:\homevalue-backend\src\main\java\com\homevalue\model\User.java
+C:\homevalue-backend\src\main\java\com\homevalue\repository\UserRepository.java
