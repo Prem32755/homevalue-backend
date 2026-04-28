@@ -33,4 +33,12 @@ public class PropertyController {
     public Property createProperty(@RequestBody Property property) {
         return propertyService.saveProperty(property);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteProperty(@PathVariable Long id) {
+        if (propertyService.deleteProperty(id)) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.notFound().build();
+    }
 }

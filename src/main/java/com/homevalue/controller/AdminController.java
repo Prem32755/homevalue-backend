@@ -39,6 +39,8 @@ public class AdminController {
         stats.put("totalAssessments", propertyRepository.count());
         stats.put("avgValueIncrease", "Rs. 2,45,000");
         stats.put("activeRecommendations", enhancementRepository.count());
+        stats.put("activeFeatures", 6);
+        stats.put("totalRequests", customerRequestRepository.count());
         stats.put("pendingRequests", customerRequestRepository.countByStatusIgnoreCase("Pending"));
         return stats;
     }

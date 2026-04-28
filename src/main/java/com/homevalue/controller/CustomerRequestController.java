@@ -38,6 +38,9 @@ public class CustomerRequestController {
         if (customerRequest.getUserName() == null || customerRequest.getUserName().isBlank()) {
             return ResponseEntity.badRequest().body("User name is required");
         }
+        if (customerRequest.getRequestGoal() == null || customerRequest.getRequestGoal().isBlank()) {
+            return ResponseEntity.badRequest().body("Request goal is required");
+        }
         if (customerRequest.getMessage() == null || customerRequest.getMessage().isBlank()) {
             return ResponseEntity.badRequest().body("Message is required");
         }

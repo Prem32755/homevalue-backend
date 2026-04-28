@@ -39,4 +39,12 @@ public class PropertyService {
     public Property saveProperty(Property property) {
         return repository.save(property);
     }
+
+    public boolean deleteProperty(Long id) {
+        if (!repository.existsById(id)) {
+            return false;
+        }
+        repository.deleteById(id);
+        return true;
+    }
 }

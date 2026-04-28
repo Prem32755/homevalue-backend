@@ -28,6 +28,13 @@ public class CustomerRequestService {
         customerRequest.setUserEmail(customerRequest.getUserEmail().trim().toLowerCase(Locale.ROOT));
         customerRequest.setUserName(customerRequest.getUserName().trim());
         customerRequest.setMessage(customerRequest.getMessage().trim());
+        customerRequest.setPropertyType(trimToNull(customerRequest.getPropertyType()));
+        customerRequest.setRequestGoal(trimToNull(customerRequest.getRequestGoal()));
+        customerRequest.setBudgetRange(trimToNull(customerRequest.getBudgetRange()));
+        customerRequest.setTimeline(trimToNull(customerRequest.getTimeline()));
+        customerRequest.setRequirementType(trimToNull(customerRequest.getRequirementType()));
+        customerRequest.setPhone(trimToNull(customerRequest.getPhone()));
+        customerRequest.setCity(trimToNull(customerRequest.getCity()));
         if (customerRequest.getStatus() == null || customerRequest.getStatus().isBlank()) {
             customerRequest.setStatus("Pending");
         }
@@ -46,5 +53,13 @@ public class CustomerRequestService {
 
     public long countPending() {
         return customerRequestRepository.countByStatusIgnoreCase("Pending");
+    }
+
+    private String trimToNull(String value) {
+        if (value == null) {
+            return null;
+        }
+        String trimmed = value.trim();
+        return trimmed.isEmpty() ? null : trimmed;
     }
 }
