@@ -27,6 +27,9 @@ public class CustomerRequest {
     private String phone;
     private String city;
     private String propertyType;
+    private String requestGoal;
+    private String budgetRange;
+    private String timeline;
     private String requirementType;
 
     @Column(columnDefinition = "TEXT", nullable = false)
@@ -99,6 +102,30 @@ public class CustomerRequest {
 
     public void setPropertyType(String propertyType) {
         this.propertyType = propertyType;
+    }
+
+    public String getRequestGoal() {
+        return requestGoal;
+    }
+
+    public void setRequestGoal(String requestGoal) {
+        this.requestGoal = requestGoal;
+    }
+
+    public String getBudgetRange() {
+        return budgetRange;
+    }
+
+    public void setBudgetRange(String budgetRange) {
+        this.budgetRange = budgetRange;
+    }
+
+    public String getTimeline() {
+        return timeline;
+    }
+
+    public void setTimeline(String timeline) {
+        this.timeline = timeline;
     }
 
     public String getRequirementType() {

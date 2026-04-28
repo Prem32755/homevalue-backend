@@ -53,6 +53,9 @@ public class DataSeeder {
                         "+91 9876543210",
                         "Bengaluru",
                         "2 BHK Apartment",
+                        "Renovate",
+                        "Rs. 2,00,000 - Rs. 5,00,000",
+                        "Within 3 months",
                         "Need renovation advice",
                         "I want ideas to improve resale value before listing my apartment next quarter.",
                         "Pending",
@@ -111,7 +114,8 @@ public class DataSeeder {
     }
 
     private CustomerRequest createRequest(String userEmail, String userName, String phone, String city,
-                                          String propertyType, String requirementType, String message,
+                                          String propertyType, String requestGoal, String budgetRange,
+                                          String timeline, String requirementType, String message,
                                           String status, String adminResponse, LocalDateTime respondedAt) {
         CustomerRequest customerRequest = new CustomerRequest();
         customerRequest.setUserEmail(userEmail);
@@ -119,6 +123,9 @@ public class DataSeeder {
         customerRequest.setPhone(phone);
         customerRequest.setCity(city);
         customerRequest.setPropertyType(propertyType);
+        customerRequest.setRequestGoal(requestGoal);
+        customerRequest.setBudgetRange(budgetRange);
+        customerRequest.setTimeline(timeline);
         customerRequest.setRequirementType(requirementType);
         customerRequest.setMessage(message);
         customerRequest.setStatus(status);
